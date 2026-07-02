@@ -1,396 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-content="Professional Business Portfolio Website">
-
-<meta name="keywords"
-content="Portfolio, Web Development, SEO, Freelance">
-
-<meta name="author"
-content="Saniya Kazi">
-
-    <!-- SEO -->
-    <title>Saniya Web Studio | Professional Web Development Agency</title>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
+    <title>MoodVerse</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"Person",
- "name":"Your Name",
- "jobTitle":"Web Developer",
- "url":"https://yourwebsite.com",
- "email":"your@email.com"
-}
-</script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<header>
-    <nav class="navbar">
-        <div class="logo">Saniya Web Studio</div>
+    <div id="music-notes"></div>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="case-study.html">Case Studies</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Background Glow -->
+    <div class="bg1"></div>
+    <div class="bg2"></div>
 
-<!-- HERO -->
-<section class="hero">
+    <div class="container">
 
-    <div class="hero-content">
+        <!-- Hero Section -->
 
-        <div class="hero-text">
+        <header>
 
-            <span class="tag">
-                🚀 Professional Web Development Agency
-            </span>
-
-            <h1>
-               Build Premium Websites
-That Convert Visitors Into Clients
-            </h1>
+            <h1>MoodVerse 🎵</h1>
 
             <p>
-                We help startups, freelancers and businesses
-build professional websites that increase trust,
-generate enquiries and grow revenue.
+                Music That Understands Your Emotions
             </p>
 
-            <div class="hero-buttons">
+        </header>
 
-                <a href="portfolio.html" class="btn">
-                    View Portfolio
-                </a>
+        <!-- Mood Cards -->
 
-                <a href="contact.html" class="btn secondary-btn">
-                    Get Free Quote
-                </a>
+        <section class="mood-section">
+
+            <h2>Select Your Mood</h2>
+
+            <div class="mood-grid">
+
+                <div class="mood-card happy"
+                    onclick="showMood('happy')">
+                    😊
+                    <span>Happy</span>
+                </div>
+
+                <div class="mood-card sad"
+                    onclick="showMood('sad')">
+                    😔
+                    <span>Sad</span>
+                </div>
+
+                <div class="mood-card stressed"
+                    onclick="showMood('stressed')">
+                    😩
+                    <span>Stressed</span>
+                </div>
+
+                <div class="mood-card focused"
+                    onclick="showMood('focused')">
+                    🎯
+                    <span>Focused</span>
+                </div>
+
+                <div class="mood-card excited"
+                    onclick="showMood('excited')">
+                    🥳
+                    <span>Excited</span>
+                </div>
 
             </div>
 
-        </div>
+        </section>
 
-        <div class="hero-image">
+        <section class="glass">
 
-            <img src="images/dashboard.jpg" alt="Developer">
+<h2>Your Current Mood</h2>
 
-        </div>
+<div id="avatar">
 
-    </div>
+🙂
 
-</section>
-<section class="stats-section">
-
-    <div class="stat-card">
-        <h2>5+</h2>
-        <p>Projects Completed</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>10+</h2>
-        <p>Happy Clients</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>99%</h2>
-        <p>Client Satisfaction</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>24/7</h2>
-        <p>Support</p>
-    </div>
-
-</section>
-<section>
-
-    <h2 class="section-title">
-        Why Choose Us
-    </h2>
-
-    <div class="service-grid">
-
-        <div class="service-card">
-            <h3>⚡ Fast Delivery</h3>
-            <p>Projects delivered on time.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>📱 Responsive Design</h3>
-            <p>Works perfectly on all devices.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>📈 SEO Optimized</h3>
-            <p>Better visibility on search engines.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>💬 Lifetime Support</h3>
-            <p>Dedicated support after delivery.</p>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- SERVICES -->
-<section class="services">
+        <!-- Mood Score -->
 
-    <h2 class="section-title">Our Services</h2>
+        <section class="glass">
 
-    <div class="service-grid">
+            <h2>Mood Energy Score</h2>
 
-        <div class="service-card">
-            <i class="fa-solid fa-code"></i>
-            <h3>Web Development</h3>
-            <p>Modern responsive websites for businesses.</p>
-        </div>
+            <div class="progress">
 
-        <div class="service-card">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <h3>E-Commerce</h3>
-            <p>Online stores that increase sales.</p>
-        </div>
+                <div id="progressBar"></div>
 
-        <div class="service-card">
-            <i class="fa-solid fa-chart-line"></i>
-            <h3>SEO</h3>
-            <p>Improve rankings and generate leads.</p>
-        </div>
-
-        <div class="service-card">
-            <i class="fa-solid fa-pen-ruler"></i>
-            <h3>UI / UX Design</h3>
-            <p>Premium user experiences for customers.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- FEATURED PROJECTS -->
-<section class="projects">
-
-    <h2 class="section-title">Featured Projects</h2>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-            <img src="images/project1.jpg" alt="Project 1">
-            <div class="project-info">
-               <h3>Business Website</h3>
-
-<p>
-Corporate website focused on lead generation and brand presence.
-</p>
-
-<p>
-<strong>Technologies:</strong>
-HTML • CSS • JS
-</p>
-
-<a href="project-business.html" class="btn">
-View Project
-</a>
             </div>
-        </div>
 
-        <div class="project-card">
-            <img src="images/project2.jpg" alt="Project 2">
-            <div class="project-info">
-                <h3>E-Commerce Store</h3>
+            <p id="scoreText">
+                Select a mood
+            </p>
+
+        </section>
+
+        <!-- Songs -->
+
+        <section class="glass">
+
+            <h2>🎵 Recommended Songs</h2>
+
+            <div id="songContainer">
+
                 <p>
-Online shopping platform with product catalog and checkout system.
-</p>
+                    Choose a mood to get recommendations
+                </p>
 
-<p>
-<strong>Technologies:</strong>
-HTML • CSS • JS
-</p>
-
-<a href="project-business.html" class="btn">
-View Project
-</a>
             </div>
-        </div>
 
-        <div class="project-card">
-            <img src="images/project3.jpg" alt="Project 3">
-            <div class="project-info">
-                <h3>Portfolio Website</h3>
-                <p>
-Personal branding website for freelancers and professionals.
+        </section>
+
+        <!-- Youtube Player -->
+
+        <section class="glass">
+
+            <h2>▶ Now Playing</h2>
+
+            <iframe
+                id="player"
+                width="100%"
+                height="350"
+                src=""
+                allowfullscreen>
+            </iframe>
+
+        </section>
+
+        <!-- Activity -->
+
+        <section class="glass">
+
+            <h2>🏃 Activity Suggestion</h2>
+
+            <p id="activity">
+
+                Select a mood
+
+            </p>
+
+        </section>
+
+        <section class="glass">
+
+<h2>🧠 AI Emotion Analysis</h2>
+
+<p id="analysis">
+
+Waiting for mood selection...
+
 </p>
 
-<p>
-<strong>Technologies:</strong>
-HTML • CSS • JS
-</p>
-
-<a href="project-business.html" class="btn">
-View Project
-</a>
-            </div>
-        </div>
-
-    </div>
-
 </section>
 
-<!-- YOUTUBE VIDEO -->
-<section class="video-section">
+        <!-- Quote -->
 
-    <h2 class="section-title">Watch Our Work</h2>
+        <section class="glass">
 
-    <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/2tdF13of8gs?si=Cxn4wZq8lUXxcrK4"
-        title="YouTube video player"
-        allowfullscreen>
-    </iframe>
+            <h2>💡 Daily Motivation</h2>
 
-</section>
+            <p id="quote">
 
-<!-- TESTIMONIALS -->
-<div class="testimonial-slider">
+                Select a mood
 
-    <div class="testimonial active">
-        "Saniya Web Studio created a professional website that significantly improved our online presence."
-        <br><br>
-        <strong>– Restaurant Owner</strong>
-    </div>
+            </p>
 
-    <div class="testimonial">
-        "The website was delivered before deadline and exceeded our expectations."
-        <br><br>
-        <strong>– E-Commerce Client</strong>
-    </div>
+        </section>
 
-    <div class="testimonial">
-        "Our enquiries increased after launching the new website."
-        <br><br>
-        <strong>– Freelance Professional</strong>
-    </div>
+        <!-- Statistics -->
 
-</div>
+        <section class="glass">
 
-<section>
+            <h2>📊 Mood Statistics</h2>
 
-<h2 class="section-title">
-Our Process
-</h2>
+            <div id="stats"></div>
 
-<div class="service-grid">
+        </section>
 
-<div class="service-card">
-<h3>1. Requirement Analysis</h3>
-<p>Understanding client needs.</p>
-</div>
+        <!-- History -->
 
-<div class="service-card">
-<h3>2. Design</h3>
-<p>Creating modern UI concepts.</p>
-</div>
+        <section class="glass">
 
-<div class="service-card">
-<h3>3. Development</h3>
-<p>Building responsive websites.</p>
-</div>
+            <h2>🕒 Mood History</h2>
 
-<div class="service-card">
-<h3>4. Launch</h3>
-<p>Testing and deployment.</p>
-</div>
+            <ul id="history"></ul>
 
-</div>
-
-</section>
-
-<!-- CTA -->
-<section class="cta">
-
-    <h2>
-        Ready To Grow Your Business?
-    </h2>
-
-    <p>
-        Let's build something amazing together.
-    </p>
-
-    <a href="contact.html" class="btn">
-        Get Free Consultation
-    </a>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-
-    <div class="socials">
-
-
-        <a href="https://www.instagram.com/itz.sanuu33?igsh=M2FmYW0yMnE4M292" target="_blank"><i class="fab fa-instagram"></i></a>
-
-        <a href="https://www.linkedin.com/in/saniya-kazi03" target="_blank"><i class="fab fa-linkedin"></i></a>
-
-        <a href="https://github.com/sanu0303" target="_blank"><i class="fab fa-github"></i></a>
+        </section>
 
     </div>
-<div class="footer-contact">
 
-    <p>
-        📧 saniyakazi786785@gmail.com
-    </p>
-
-    <p>
-        📱 +91 8830192219
-    </p>
-
-    <p>
-        📍 Maharashtra, India
-    </p>
-
-</div>
-    <p>© 2026 Saniya Web Studio. All Rights Reserved.</p>
-
-</footer>
-
-<script src="main.js"></script>
-
-
-    <a href="https://wa.me/918830192219"
-   class="whatsapp-float"
-   target="_blank">
-
-    <i class="fab fa-whatsapp"></i>
-
-</a>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
